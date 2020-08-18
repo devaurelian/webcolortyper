@@ -1,0 +1,115 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  /* background-image: radial-gradient(var(--checker-color) .5px, transparent .5px);
+  background-size: calc(10 * .5px) calc(10 * .5px); */
+
+  /* --checker-color: #dfdfdf; */
+  --checker-color: #f0f0f0;
+
+  background-image: repeating-linear-gradient(45deg, var(--checker-color) 25%, transparent 25%, transparent 75%, var(--checker-color) 75%, var(--checker-color)),repeating-linear-gradient(45deg, var(--checker-color) 25%, transparent 25%, transparent 75%, var(--checker-color) 75%, var(--checker-color));
+  background-position: 0 0,10px 10px;
+  background-size: calc(2 * 10px) calc(2 * 10px);
+
+  background-color: white;
+  color: black;
+  /* color: #dfdfdf; */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+  color: #363636;
+  line-height: 1.5;
+  outline: 0;
+  padding: .5rem .75rem;
+}
+
+input[type="text"]:hover {
+  border-color: #b5b5b5;
+}
+
+input[type="text"]:focus {
+  border-color: #4a4a4a;
+  border-width: 1.5px;
+  padding: calc(.5rem - 0.5px) .75rem;
+}
+
+
+.appl-color-input {
+  width: 100%;
+}
+
+
+.appl-main {
+  max-width: 540px;
+  width: 80%;
+}
+
+
+.appl-main__header {
+  background-color: #4a4a4a;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  padding: .75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.appl-button--close {
+  background-color: rgba(10, 10, 10, .2);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  outline: 0;
+  padding: 0 0.275rem 0.15rem 0.275rem;
+  user-select: none;
+}
+
+.appl-button--close:focus, .appl-button--close:hover {
+  background-color: rgba(10, 10, 10, .3);
+}
+
+.appl-button--close:active {
+  background-color: rgba(10, 10, 10, .4);
+}
+
+.appl-main__body {
+  background-color: #f5f5f5;
+  /* padding: 1.25rem 1.5rem; */
+  padding: 2rem 1.5rem;
+  border-radius: 0 0 4px 4px;
+}
+
+.appl-main__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.appl-tip {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  color: #fff;
+  border-radius: 4px;
+  padding: .5rem .75rem;
+  text-shadow: 1px 1px transparent, -1px -1px black;
+}
+
