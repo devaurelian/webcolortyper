@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Color Typer</title>
+  
+  <link rel="manifest" href="/manifest.webmanifest">
+
   <link rel="stylesheet" href="/css/modern-normalize.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -15,12 +18,13 @@
   <main class="appl-main" id="main">
     <div class="appl-main__header">
       <h1 class="appl-main__title">
-        <a href="https://appliberated.com/webcolortyper/" target="_blank">Web Color Typer</a>
+        <a href="https://github.com/techaurelian/webcolortyper" target="_blank" rel="noopener">Web Color Typer</a>
       </h1>
       <button id="close-settings" class="appl-button--close">&times;</button>
     </div>
     <div class="appl-main__body">
-      <input type="text" id="color-input" class="appl-color-input" spellcheck="false" value="salmon"
+      <input type="text" id="color-input" class="appl-color-input" spellcheck="false" aria-label="Color name or code"
+        value="salmon"
         placeholder="fuchsia, #7822FF, rgb(255,0,153), hsl(120,100%,60%)">
     </div>
   </main>
