@@ -1,0 +1,30 @@
+{
+  "background_color": "salmon",
+  "categories": ["education", "entertainment", "personalization", "productivity", "utilities"],
+  "description": "",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/img/manifest/webcolortyper-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/manifest/webcolortyper-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "lang": "en-US",
+  "name": "Web Color Typer",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "screenshots": [],
+  "short_name": "Web Color Typer",
+  "shortcuts": [],
+  "start_url": "/?source=pwa",
+  "theme_color": "salmon"
+}
