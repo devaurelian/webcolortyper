@@ -20,17 +20,18 @@
       <button id="close-settings" class="appl-button--close">&times;</button>
     </div>
     <div class="appl-main__body">
-      <input type="text" id="color-input" class="appl-color-input" spellcheck="false"
-        value="salmon"
+      <input type="text" id="color-input" class="appl-color-input" spellcheck="false" value="salmon"
         placeholder="fuchsia, #7822FF, rgb(255,0,153), hsl(120,100%,60%)">
-      </div>
+    </div>
   </main>
   <p id="tip" hidden class="appl-tip">Click anywhere to show the color typer again.</p>
 
-
-
-
   <script type="module" src="/js/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    };    
+  </script>
 </body>
 
 </html>
