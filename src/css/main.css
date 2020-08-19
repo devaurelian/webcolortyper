@@ -64,13 +64,13 @@ input[type="text"]:focus {
 
 
 .appl-main__header {
+  align-items: center;
   background-color: #4a4a4a;
   border-radius: 4px 4px 0 0;
   color: #fff;
-  padding: .75rem 1rem;
-  justify-content: space-between;
-  align-items: center;
   display: flex;
+  justify-content: space-between;
+  padding: .75rem 1rem;
 }
 
 .appl-button--close {

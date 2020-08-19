@@ -7,13 +7,15 @@
   "icons": [
     {
       "src": "/img/manifest/webcolortyper-icon-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "any maskable"
     },
     {
       "src": "/img/manifest/webcolortyper-icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any maskable"
     }
   ],
   "lang": "en-US",
@@ -26,5 +28,5 @@
   "short_name": "Web Color Typer",
   "shortcuts": [],
   "start_url": "/?source=pwa",
-  "theme_color": "#000000"
+  "theme_color": "#ffffff"
 }

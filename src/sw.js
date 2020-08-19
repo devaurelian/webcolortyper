@@ -8,7 +8,7 @@
  *
  */
 
-const version = "1";
+const version = "2";
 const cacheName = `webcolortyper-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(

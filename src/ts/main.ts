@@ -1,15 +1,13 @@
 const mainEl = document.getElementById("main");
 const tipEl = document.getElementById("tip");
 let firstTip = true;
-const themeColorMeta = <HTMLMetaElement>document.querySelector("meta[name=theme-color]");
 
 /**
- * Set a new color. Update the body background and the theme-color meta attribute.
+ * Set a new color. Update the body background.
  * @param color The color value to set.
  */
 function setNewColor(color: string) {
   document.body.style.backgroundColor = color;
-  themeColorMeta.setAttribute("content", color);
 }
 
 function initColorInput() {
