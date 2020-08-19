@@ -2,13 +2,20 @@
 const mainEl = document.getElementById("main");
 const tipEl = document.getElementById("tip");
 let firstTip = true;
+/**
+ * Set a new color. Update the body background.
+ * @param color The color value to set.
+ */
+function setNewColor(color) {
+    document.body.style.backgroundColor = color;
+}
 function initColorInput() {
     const backColorInput = document.getElementById("color-input");
     backColorInput === null || backColorInput === void 0 ? void 0 : backColorInput.addEventListener("input", () => {
+        // The typed color may be invalid, so make sure the transparent CSS pattern is visible
         document.body.style.backgroundColor = "transparent";
-        const color = backColorInput.value;
-        // Update the background color of the body
-        document.body.style.backgroundColor = color;
+        // Set the new color
+        setNewColor(backColorInput.value);
     });
 }
 function hideDialog() {
