@@ -1,3 +1,7 @@
+:root {
+  --appl-gray: #4a4a4a;
+}
+
 html, body {
   height: 100%;
 }
@@ -22,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.5;
 }
 
 
@@ -108,9 +113,45 @@ input[type="text"]:focus {
 
 .appl-tip {
   /* background-color: rgba(255, 255, 255, 0.5); */
-  color: #fff;
+  /* color: #fff; */
+  /* color: gray;
+  mix-blend-mode: difference; */
+
+  /* color: #fff;
+  mix-blend-mode: difference; */
+
+  /* background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: invert(1) grayscale(1) contrast(2); */
+  
+  /* font-weight: 700;  
+
   border-radius: 4px;
-  padding: .5rem .75rem;
-  text-shadow: 1px 1px transparent, -1px -1px black;
+  padding: .5rem .75rem; */
+  /* text-shadow: 1px 1px transparent, -1px -1px black; */
+
+  /* color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0 var(--appl-gray),
+      -1px -1px 0 var(--appl-gray),
+      1px -1px 0 var(--appl-gray),
+      -1px 1px 0 var(--appl-gray),
+      1px 1px 2px rgba(0, 0, 0, 0.65);   */
+
+      background: inherit;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      filter: invert(1) grayscale(1) contrast(2);
+      letter-spacing: 1px;
+    font-weight: 500;
 }
 
+/* @supports (-webkit-text-stroke:5px black) {
+  .appl-tip {
+    -webkit-text-stroke: 5px black;
+  }
+} */
