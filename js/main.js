@@ -1,4 +1,13 @@
 "use strict";
+/*
+ *
+ *  Web Color Typer
+ *  https://github.com/techaurelian/webcolortyper
+ *
+ *  Copyright (c) 2020 techaurelian. All rights reserved.
+ *  Licensed under the MIT license.
+ *
+ */
 const colorTyperEl = document.getElementById("color-typer");
 const tipEl = document.getElementById("tip");
 let firstTip = true;
