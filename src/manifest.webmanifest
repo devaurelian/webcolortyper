@@ -1,7 +1,7 @@
 {
   "background_color": "salmon",
   "categories": ["education", "entertainment", "personalization", "productivity", "utilities"],
-  "description": "",
+  "description": "Try web colors by typing their name, hex code, rgb triplet, and more. Install the PWA on your device and get an instant color window or fullscreen for various purposes.",
   "dir": "ltr",
   "display": "standalone",
   "icons": [
@@ -27,6 +27,6 @@
   "screenshots": [],
   "short_name": "Web Color Typer",
   "shortcuts": [],
-  "start_url": "/?source=pwa",
+  "start_url": "/",
   "theme_color": "#ffffff"
 }
