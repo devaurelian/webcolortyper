@@ -26,6 +26,7 @@ body {
 
 a {
   color: inherit;
+  outline-offset: .25rem;
   text-decoration: none;
 }
 
@@ -35,7 +36,7 @@ input[type="text"] {
   border: 1px solid #dbdbdb;
   color: #363636;
   line-height: 1.5;
-  outline: 0;
+  outline: none;
   padding: .5rem .75rem;
 }
 
@@ -49,8 +50,9 @@ input[type="text"]:focus {
   padding: calc(.5rem - 0.5px) .75rem;
 }
 
-.appl-color-input {
-  width: 100%;
+::selection { 
+  background: black;
+  color: white;
 }
 
 /* ==========================================================================
@@ -87,27 +89,56 @@ input[type="text"]:focus {
  */
 
 .appl-button--close {
-  background-color: rgba(10, 10, 10, .2);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
   border-radius: 50%;
   border: none;
-  color: white;
   cursor: pointer;
-  display: inline-flex;
-  font-weight: bold;
-  height: 1.25rem;
-  justify-content: center;
-  line-height: 0.85;
-  outline: 0;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  pointer-events: auto;
+  position: relative;
   user-select: none;
-  width: 1.25rem;
+  vertical-align: top;
+  width: 20px;
+}
+
+.appl-button--close::before, .appl-button--close::after {
+  background-color: white;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.appl-button--close::before {
+  height: 2px;
+  width: 50%;
+}
+
+.appl-button--close::after {
+  height: 50%;
+  width: 2px;
 }
 
 .appl-button--close:focus, .appl-button--close:hover {
-  background-color: rgba(10, 10, 10, .3);
+  background-color: rgba(10, 10, 10, 0.3);
 }
 
 .appl-button--close:active {
-  background-color: rgba(10, 10, 10, .4);
+  background-color: rgba(10, 10, 10, 0.4);
 }
 
 /*
@@ -120,6 +151,10 @@ input[type="text"]:focus {
   padding: 2rem 1.5rem;
 }
 
+.appl-color-input {
+  width: 100%;
+}
+
 /*
  * Tip (with contrasting text against background)
  */
@@ -129,7 +164,10 @@ input[type="text"]:focus {
   background-clip: text;
   background-color: inherit;
   color: transparent;
+  cursor: default;
   filter: invert(1) grayscale(1) contrast(2);
   font-weight: 500;
   letter-spacing: 1px;
+  text-align: center;
+  user-select: none;
 }

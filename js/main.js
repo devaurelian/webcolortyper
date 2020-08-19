@@ -1,60 +1,50 @@
 "use strict";
-const mainEl = document.getElementById("main");
+const colorTyperEl = document.getElementById("color-typer");
 const tipEl = document.getElementById("tip");
 let firstTip = true;
 /**
- * Set a new color. Update the body background.
+ * Sets a new color. Updates the body background.
  * @param color The color value to set.
  */
 function setNewColor(color) {
     document.body.style.backgroundColor = color;
 }
+/**
+ * Initializes the functionality of the color typer input element.
+ */
 function initColorInput() {
     const backColorInput = document.getElementById("color-input");
-    backColorInput === null || backColorInput === void 0 ? void 0 : backColorInput.addEventListener("input", () => {
+    backColorInput.addEventListener("input", () => {
         // The typed color may be invalid, so make sure the transparent CSS pattern is visible
         document.body.style.backgroundColor = "transparent";
         // Set the new color
         setNewColor(backColorInput.value);
     });
 }
-function hideDialog() {
-    if (mainEl) {
-        mainEl.hidden = true;
-        if (tipEl)
+/**
+ * Initializes the functionality of the color typer close button.
+ */
+function initCloseButton() {
+    // Hide the color typer and show the tip when the user clicks the close button
+    const closeButton = document.getElementById("close-typer");
+    closeButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        colorTyperEl.hidden = true;
+        if (firstTip) {
             tipEl.hidden = false;
-    }
-}
-function initCloseSettings() {
-    const closeButton = document.getElementById("close-settings");
-    closeButton === null || closeButton === void 0 ? void 0 : closeButton.addEventListener("click", () => {
-        // if (mainEl) mainEl.hidden = true;
-        if (mainEl) {
-            mainEl.hidden = true;
-            if (tipEl && firstTip) {
-                tipEl.hidden = false;
-                firstTip = false;
-            }
+            firstTip = false;
         }
     });
-    document.body.addEventListener("click", (e) => {
-        if ((mainEl === null || mainEl === void 0 ? void 0 : mainEl.hidden) && e.target === document.body) {
-            // if (mainEl?.hidden) {
-            console.log(e.target);
-            mainEl.hidden = false;
-            if ((tipEl === null || tipEl === void 0 ? void 0 : tipEl.hidden) === false)
+    // Show the color typer and hide the tip when the user clicks the body
+    document.body.addEventListener("click", () => {
+        if (colorTyperEl.hidden) {
+            colorTyperEl.hidden = false;
+            if (tipEl.hidden === false)
                 tipEl.hidden = true;
         }
-        // e.cancelBubble = true;
-        // mainEl.hidden = !mainEl.hidden;
-        // if (mainEl && e.target === document.body) {
-        //     // e.preventDefault();
-        //     e.cancelBubble = true;
-        //     mainEl.hidden = !mainEl.hidden;
-        //   }
-        // if (mainEl?.hidden) mainEl.hidden = false;
     });
 }
+// App initialization
 initColorInput();
-initCloseSettings();
+initCloseButton();
 //# sourceMappingURL=main.js.map

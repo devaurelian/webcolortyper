@@ -15,13 +15,12 @@
 
 <body style="background-color: salmon;">
 
-
-  <main class="appl-main" id="main">
+  <main id="color-typer" class="appl-main">
     <div class="appl-main__header">
       <h1 class="appl-main__title">
         <a href="https://github.com/techaurelian/webcolortyper" target="_blank" rel="noopener">Web Color Typer</a>
       </h1>
-      <button id="close-settings" class="appl-button--close">&times;</button>
+      <button id="close-typer" type="button" class="appl-button--close" aria-label="Close"></button>
     </div>
     <div class="appl-main__body">
       <input type="text" id="color-input" class="appl-color-input" spellcheck="false" aria-label="Color name or code"
@@ -29,7 +28,7 @@
         placeholder="fuchsia, #7822FF, rgb(255,0,153), hsl(120,100%,60%)">
     </div>
   </main>
-  <p id="tip" hidden class="appl-tip">Click anywhere to show the color typer again.</p>
+  <p id="tip" hidden class="appl-tip">Click anywhere to show the color typer</p>
 
   <script type="module" src="/js/main.js"></script>
   <script>
