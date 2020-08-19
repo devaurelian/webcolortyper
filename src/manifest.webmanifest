@@ -26,5 +26,5 @@
   "short_name": "Web Color Typer",
   "shortcuts": [],
   "start_url": "/?source=pwa",
-  "theme_color": "salmon"
+  "theme_color": "#000000"
 }
